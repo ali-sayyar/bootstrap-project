@@ -1,0 +1,188 @@
+:root {
+  --dark: #19283f;
+  --green: #33d1cc;
+  --red: #ff3150;
+  --yellow: #ffc400;
+  --section-color: #eff7fa;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-btn {
+  background-color: var(--red);
+  color: var(--yellow);
+}
+
+.main-btn:hover {
+  color: var(--yellow);
+}
+
+.main-title::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: var(--green);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* navbar */
+.navbar {
+  background-color: var(--dark);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green);
+}
+
+.navbar .search {
+  color: var(--green);
+  border-left: 1px solid var(--green);
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green);
+}
+
+/* landing */
+.landing {
+  background-color: var(--dark);
+  min-height: calc(100vh - 72px);
+}
+
+/* features */
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .icon-holder .num {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+
+.features .icon-holder .icon {
+  color: var(--green);
+}
+
+.features h4 {
+  color: var(--yellow);
+}
+
+/* our work */
+
+.our-work {
+  background-color: var(--section-color);
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.our-work ul li.active {
+  background-color: var(--red);
+  color: var(--yellow);
+}
+.our-work ul li:not(.active):hover {
+  color: var(--red);
+}
+
+.our-work .box {
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: #33d1cc74;
+  color: white;
+  font-size: 1.5rem;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(calc(-100% - 5px));
+  transition: 0.3s;
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+/* stuff */
+
+.stuff .desc {
+  max-width: 500px;
+}
+
+/* team */
+
+.team {
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--yellow);
+}
+
+.team h4 {
+  background-color: var(--green);
+}
+
+/* Project */
+
+.project {
+  background-color: var(--dark);
+}
+
+/* subscribe */
+
+.sub {
+  background-color: var(--yellow);
+}
+
+.sub input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.sub ::placeholder {
+  color: white;
+}
+
+.sub input[type="submit"] {
+  background-color: var(--dark);
+  color: var(--yellow);
+}
+
+/* footer */
+.footer {
+  background-color: var(--dark);
+}
